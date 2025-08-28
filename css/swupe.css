@@ -1,0 +1,126 @@
+.best{
+  width: 100%;
+  height: 100vw;
+}
+
+.best>article{
+  display: flex;
+}
+
+.best-img{
+  height: 0;
+}
+.best-img>img{
+  width: 39.7vw;
+  height: 100vw;
+  object-fit: cover;
+}
+.best>article>.pink{
+  width: 60%;
+  /* height: 115vw; */
+  background-color: #F5E8DD;
+}
+.best>article .best-wrap{
+  width: 100%;
+  height: 100vw;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 10vw;
+  position: relative;
+}
+.best h1{
+  font-size: 3vw;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  top: 3.5vw;
+  left: 50%;
+  transform: translate(-50%);
+  white-space: nowrap;
+}
+.best>article .best-wrap figure img{
+  /* width: 25vw; */
+  flex: 1;
+  height: 20vw;
+}
+.best>article .best-wrap>.best-product{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 4vw;
+}
+.best-product .product h3{
+  white-space: nowrap;
+  font-size: 1.3vw;
+}
+  
+/* 모바일 swipe 적용 */
+.best-product.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
+}
+.best-product.swiper-wrapper .swiper-slide {
+  flex: 0 0 auto;
+}
+
+/* PC flex 레이아웃 유지 */
+@media (min-width: 1021px) {
+  .best-product {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+  .best-product figure {
+      flex: 1 1 calc(33.33% - 10px);
+      width: auto;
+  }
+}
+
+
+
+  /* ----- 모바일 스타일 ----- */
+  @media (max-width: 1020px) {
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-pagination {
+      display: block;
+    }
+
+
+    .best > article {
+      flex-direction: column;
+    }
+    .best-img > img {
+      width: 100%;
+      height: auto;
+    }
+    .best > article > .pink {
+      width: 100%;
+    }
+    .best h1 {
+      font-size: 5vw;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 3vw;
+    }
+  
+    /* 모바일 Swiper */
+    .swiper-wrapper {
+      display: block; /* flex 제거 */
+    }
+    .swiper-slide {
+      width: auto !important; /* 슬라이드가 내용 크기에 맞게 */
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+    }
+    .swiper-slide .product h3 {
+      font-size: 4vw;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 1vw;
+    }
+  }

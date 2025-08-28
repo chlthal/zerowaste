@@ -1,0 +1,170 @@
+main{
+    width: 100%; 
+    background-color: white;
+    margin: 0 auto;
+}
+#first{
+    width: 100%; 
+    height: 45vw;
+    background-color: black;
+    margin-bottom: 8vw;
+    position: relative;
+}
+#first>.textbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 5vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+}
+#first>.textbox>h1{
+    line-height: 5vw;
+    text-align: center;
+    font-size: 3vw;
+}
+#first>img{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    margin: 0 auto 6vw;
+    padding: 0 8vw;
+}
+
+.sec1>h1{
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sec2{
+    display: flex;
+    justify-content: space-between;
+}
+.sec2>div{
+    flex: 1;
+    height: 100%; 
+}
+.sec2>.sec2-text{
+    padding-top: 4.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec2 p{
+    font-size: 1.5vw;
+    text-align: center;
+}
+.sec2 img{
+    width: 40vw;
+    height: 100%;
+}
+
+.sec3>.sustainable-principle{
+    margin: 0 auto;
+}
+.sec3>.sustainable-principle>h1{
+    text-align: center;
+    padding: 1vw;
+    font-size: 3vw;
+    font-weight: 700;
+    margin-bottom: 2vw;
+}
+.principle-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+.principle-img{
+    width: 26.5vw;
+    height: 30vw;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+}
+.blue{
+    background-color: lightskyblue;
+}
+.green{
+    background-color: lightgreen;
+}
+.red{
+    background-color: lightcoral;
+}
+.principle-img img{
+    width: 100%;
+    height: 20vw;
+}
+.principle-title{
+    width: 100%;
+    margin: 1vw 1.5vw;
+    font-size: 2vw;
+    font-weight: 600;
+}
+.principle-text{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 1.5vw;
+}
+
+
+@media (max-width: 1020px) {
+    .sec1>h1{
+        font-size: 5vw;
+    }
+    .sec2{
+        flex-direction: column;
+    }
+    .sec2>.sec2-text {
+        padding: 0 0 4.5vw;
+    }
+    .sec2 p{
+        font-size: 3vw;
+    }
+    .sec2 img{
+        width: 100%;
+    }
+    .sec3>.sustainable-principle>h1{
+        text-align: center;
+        padding: 1vw;
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+    .principle-wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    .principle-img{
+        width: 100%;
+        height: 70vw;
+        border-radius: 20%;
+        display: flex;
+        align-items: center;
+    }
+    .principle-img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10%;
+    }
+    .principle-title{
+        width: 100%;
+        margin: 1vw;
+        font-size: 4vw;
+        font-weight: 600;
+        /* text-align: center; */
+    }
+    .principle-text{
+        text-align: left;
+        margin-left: 1vw;
+        font-size: 3vw;
+    }
+}

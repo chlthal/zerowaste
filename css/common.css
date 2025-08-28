@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+header,
+footer {
+    width: 100%;
+    padding: 0 100px;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    background-color: #CFFFE2;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+
+.main_header {
+    background-color: #CFFFE2;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header_container {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main_nav {
+    height: 80px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav_menu {
+    height: 80px;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav_item {
+    position: relative;
+}
+
+.nav_item>a {
+    color: #191919;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 10px;
+    display: inline-block;
+    line-height: 80px;
+}
+.nav_item:hover{
+    background-color: #896C6C;
+    transition: 0.5s;
+}
+.nav_item>a:hover{
+    color: #f6f6f6;
+    transition: 0.5s;
+}
+.nav_item > .submenu {
+    position: absolute;
+    top: 100%; /* 부모 li 바로 아래 */
+    left: 0;
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    min-width: 120px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.nav_item > .submenu a{
+    padding: 5px 0;
+    display: block;
+    color: #191919;
+}
+.main_nav .nav_item:hover > .submenu {
+    display: flex; /* hover 시 표시 */
+}
+
+.main_nav .nav_item > .submenu a:hover {
+    background-color: #B6F2D6;
+    color: #191919;
+    transition: 0.5s;
+}
+
+.header_icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon_btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icon_btn img {
+    height: 24px;
+    width: 24px;
+}
+
+/* 햄버거 버튼 */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+  
+/* 모바일 네비 기본 숨김 */
+.mobile_nav {
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 40%;
+    height: 100%;
+    background: #896C6C;
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .mobile_nav.active {
+    right: 0;
+  }
+  
+  /* 메뉴 스타일 */
+  .mobile_menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mobile_menu li {
+    margin-bottom: 15px;
+  }
+  
+  .menu_item {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+  }
+
+  .mobile_item {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    background: none;
+    color: #f6f6f6;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+
+  /* 서브메뉴 */
+  .submenu {
+    display: none;
+  }
+  .mobile_item .submenu a{
+      display: block;
+      color: #f6f6f6;
+      margin-top: 10px;
+  }
+/* 반투명 배경 */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 00;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.b-brand{
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+.b-brand img{
+    width: 100%;
+}
+
+
+
+/* footer */
+footer{
+    width: 100%;
+    padding: 30px 100px;
+    background-color: #896C6C;
+    position: sticky;
+}
+footer>.f-top{
+    width: 100%;
+    display: flex;
+    margin: 10px 0px 20px;
+    color: #f6f6f6;
+}
+footer a{
+    color: #f6f6f6;
+    font-size: 13px;
+}
+.f-top ul{
+    display: flex;
+    gap: 5px;
+}
+.f-bottom{
+    display: flex;
+    justify-content: space-between;
+    color: #f6f6f6;
+}
+
+.f-bottom p{
+    padding: 5px 0;
+    font-size: 13px;
+}
+.f-left{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.f-icons{
+    display: flex;
+    /* justify-content: flex-start; */
+    margin: -30px 0px;
+    gap: 10px;
+}
+.f-icons img{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+/* 반응형 */
+
+@media (max-width: 1280px) {
+
+    header,
+    main,
+    footer {
+        width: 100%;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+    }
+    .logo img {
+        width: 80%;
+        height: auto;
+    }
+
+    .main_nav {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 70%;
+        height: 100%;
+        background: #281811;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+      }
+      .nav_menu { flex-direction: column; gap: 15px; width: 100%; }
+      .nav_item > a {
+        color: #fff;
+        font-size: 20px;
+        width: 100%;
+      }
+
+
+    .main_nav.active {
+        display: flex;
+    }
+    .icon_btn{
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .submenu li:first-child{
+        margin-top: 1vw;
+    }
+
+}
+
+@media (max-width: 1230px) {
+    footer>.f-top{
+        justify-content: center;
+    }
+    .f-middle, .f-right{
+        display: none;
+    }
+    .f-icons{
+        display: none;
+    }
+    .f-bottom{
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 720px) {
+
+    header,
+    footer {
+        width: 100%;
+        padding: 0 5vw;
+    }
+    .mobile_menu li {
+        margin-bottom: 3vw;
+    }
+    .mobile_nav{
+        width: 60%;
+    }
+    .mobile_item{
+        font-size: 3vw;
+        padding: 3vw 0;
+    }
+    .submenu a{
+        font-size: 3vw;
+    }
+    .submenu li:first-child{
+        margin-top: 1vw;
+    }
+
+
+
+
+    footer>.f-top{
+        margin: 1vw auto 2vw;
+    }
+    footer a{
+        color: #f6f6f6;
+        font-size: 2vw;
+        white-space: nowrap;
+    }
+    .f-logo{
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+
+    .main_header{
+        height: 13vw;
+    }
+    .icon_btn img{
+        width: 4vw;
+        height: 4vw;
+    }
+    .mobile_menu li {
+        margin-bottom: 1vw;
+    }
+}

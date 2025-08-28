@@ -1,0 +1,135 @@
+main{
+    width: 100%;
+}
+.fixed-photo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 100%;
+    overflow: hidden;
+}
+.fixed-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section{
+    margin-left: 33vw;
+    margin-right: 2vw;
+    margin-bottom: 10vw;
+}
+h2{
+    font-size: 3.8vw;
+    font-weight: 700;
+    margin: 1vw 0;
+}
+.product-list{
+    width: 100%;
+}
+.product-list>ul{
+    background-color: rgb(224, 224, 224);
+    margin: 0px 0 1vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.product-list>ul>li{
+    font-size: 15px;
+    padding: 1vw 2vw;
+}
+.product-list>ul>li>a{
+     color: black;
+}
+.product-listmenu{
+    display: flex;
+    justify-content: space-between;
+}
+.product-listmenu>select{
+    /* width: 5vw; */
+    height: 100%;
+    border: 0;
+}
+.fig-wrap{
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+    /* 썸네일 사이 여백 */
+    flex-wrap: wrap;
+    padding-top: 3vw;
+}
+figure{
+    margin: 0 auto;
+}
+figure div{
+    width: 100%;
+    overflow: hidden;
+}
+figure img{
+    width: 19.5vw;
+    height: 23vw;
+    transition: transform 0.4s ease;
+}
+figure img:hover{
+    transform: scale(1.1);
+}
+.product>h3{
+    font-size: 1vw;
+    color: #111;
+    border-bottom: 1px solid #757575;
+    text-align: center;
+    padding-bottom: 0.7vw;
+}
+.product>h4{
+    color: #111;
+    text-align: center;
+    padding-top: 1vw;
+}
+
+
+
+@media (max-width: 1020px){
+    .fixed-photo{
+        display: none;
+    }
+    section{
+        margin: 2vw 8vw 10vw;
+    }
+    .product-list>ul>li{
+        font-size: 1.8vw;
+        padding: 1vw 2vw;
+    }
+    .product-listmenu, .product-listmenu>select{
+        font-size: 1.5vw;
+    }
+    .fig-wrap{
+        padding-top: 4vw;
+    }
+    figure img{
+        width: 40vw;
+        height: 42vw;
+    }
+    .product>h3, .product>h4{
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 750px) {
+    figure img{
+        width: 70vw;
+        height: 60vw;
+    }
+    .product>h3, .product>h4{
+        font-size: 2.5vw;
+    }
+    .product-listmenu, .product-listmenu>select{
+        font-size: 2.5vw;
+    }
+}
+@media (max-width: 500px) {
+    .product>h3, .product>h4{
+        font-size: 3vw;
+    }
+    .product-listmenu, .product-listmenu>select{
+        font-size: 3vw;
+    }
+}
